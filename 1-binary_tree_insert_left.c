@@ -27,15 +27,15 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	}
 	else
 	{
+		new_node->parent = parent;
 		left_node = parent->left;
-		(parent->left)->parent = new_node;
+		left_node->parent = new_node;
+		parent->left = new_node;
+		new_node->left = left_node;
 		/* printf("Left node save value: %i\n", left_node->n);*/
 		/* printf("Left node parent value: %i\n", left_node->parent->n);*/
 		/* printf("New Node value: %i\n", new_node->n);*/
 		/* printf("New Node parent value: %i\n", new_node->parent->n);*/
-		new_node->parent = parent;
-		parent->left = new_node;
-		new_node->left = left_node;
 	}
 	return (new_node);
 }

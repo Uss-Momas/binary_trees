@@ -28,7 +28,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	else
 	{
 		left_node = parent->left;
-		left_node->parent = new_node;
+		(parent->left)->parent = new_node;
 		/* printf("Left node save value: %i\n", left_node->n);*/
 		/* printf("Left node parent value: %i\n", left_node->parent->n);*/
 		/* printf("New Node value: %i\n", new_node->n);*/

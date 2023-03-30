@@ -12,7 +12,7 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 	root_ref = tree;
-	while(root_ref->parent != NULL)
+	while (root_ref->parent != NULL)
 	{
 		root_ref = root_ref->parent;
 		depth++;
